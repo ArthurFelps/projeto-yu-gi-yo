@@ -143,7 +143,8 @@ async function checkDuelResults(){
     }
 
     if(playerCard.LoseOf.includes(computerCardId)){
-        duelResults = "Perdeu";
+        duelResults = "lose";
+        await playAudio(duelResults);
         state.score.computerScore++;
     }
 
